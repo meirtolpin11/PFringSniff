@@ -1,0 +1,11 @@
+all: 
+	gcc sniffer.c pf_ring.c runner.c -lpfring -lpcap
+	 
+unittest: 
+	gcc sniffer.c pf_ring.c unittest.c -lpfring -lpcap
+
+clean:
+	rm a.out 
+	rm sniffer.c~
+	rm Makefile~
+	rm unittest.c~
